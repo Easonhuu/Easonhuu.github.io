@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f7f2">
-  <meta name="description" content="Eason Hu — an independent home for selected machine learning projects and research interests.">
+  <meta name="description" content="Eason Hu (Yishen Hu) — publications, machine learning projects and research interests.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Eason Hu — Research & Engineering">
-  <meta property="og:description" content="Selected machine learning projects and research interests from Eason Hu.">
+  <meta property="og:description" content="Publications, projects and research interests from Eason Hu (Yishen Hu).">
   <title>Eason Hu — Research & Engineering</title>
   <style>
     :root { color-scheme: light; --bg:#f7f7f2; --paper:#fffefa; --ink:#202e32; --muted:#617071; --line:#dce2dc; --accent:#176c6d; --warm:#d9a777; --sans:Inter,"Helvetica Neue",Arial,"Noto Sans",sans-serif; --serif:Georgia,"Times New Roman",serif; }
@@ -71,6 +71,15 @@
     .project-card p { font-size:13px; line-height:1.75; color:#647273; max-width:650px; margin:0; }
     .arrow { align-self:center; display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:#e9f1eb; color:var(--accent); font-size:19px; transition:transform .2s; }
     .project-card:hover .arrow { transform:translate(2px,-2px); }
+    .paper-list { display:grid; gap:15px; }
+    .paper-card { padding:27px 30px; border:1px solid var(--line); background:var(--paper); }
+    .paper-card h3 { font:normal 23px/1.32 var(--serif); letter-spacing:-.025em; margin:0 0 11px; }
+    .paper-card .authors { color:#506566; font-size:12px; line-height:1.7; margin:0 0 10px; }
+    .paper-card .authors strong { color:var(--ink); font-weight:750; }
+    .paper-card .summary { color:#657273; font-size:13px; line-height:1.75; margin:0 0 17px; }
+    .paper-links { display:flex; flex-wrap:wrap; gap:18px; }
+    .paper-links a { font-size:12px; font-weight:750; color:var(--accent); border-bottom:1px solid #a7bbb2; padding-bottom:4px; }
+    .paper-links a:hover { border-color:var(--accent); }
     .interests { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
     .interest { padding:25px 22px; border-top:2px solid #a3bdb4; background:rgba(255,255,251,.66); min-height:174px; }
     .interest .interest-icon { font:italic 25px var(--serif); color:var(--accent); margin-bottom:18px; }
@@ -91,7 +100,7 @@
     <div class="shell header-inner">
       <a class="brand" href="#top" aria-label="Eason Hu, back to top"><span class="brand-mark" aria-hidden="true">e.</span><span>Eason Hu</span></a>
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#work">Work</a><a href="#interests">Interests</a>
+        <a href="#about">About</a><a href="#publications">Publications</a><a href="#work">Work</a><a href="#interests">Interests</a>
         <a class="nav-github" href="https://github.com/Easonhuu" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </nav>
     </div>
@@ -101,7 +110,7 @@
       <div>
         <div class="eyebrow">Research · Engineering · Open Source</div>
         <h1>Hello, I'm <em>Eason Hu.</em></h1>
-        <p class="hero-copy">I build and explore machine learning systems. This is a home for my public projects, technical interests, and the ideas I am working through.</p>
+        <p class="hero-copy">I build and explore machine learning systems. I publish research as Yishen Hu; this is a home for my papers, public projects, and technical interests.</p>
         <div class="hero-actions">
           <a class="button-primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
           <a class="text-link" href="https://github.com/Easonhuu" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a>
@@ -113,15 +122,34 @@
       </div>
     </div>
     <div class="layout">
-      <aside class="rail" aria-label="Page sections"><div class="rail-inner"><div class="rail-title">On this page</div><a href="#about">01 &nbsp; About</a><a href="#work">02 &nbsp; Selected work</a><a href="#interests">03 &nbsp; Interests</a><a href="#contact">04 &nbsp; Connect</a><div class="rail-foot">A small corner of the internet for ideas and code.</div></div></aside>
+      <aside class="rail" aria-label="Page sections"><div class="rail-inner"><div class="rail-title">On this page</div><a href="#about">01 &nbsp; About</a><a href="#publications">02 &nbsp; Publications</a><a href="#work">03 &nbsp; Selected work</a><a href="#interests">04 &nbsp; Interests</a><a href="#contact">05 &nbsp; Connect</a><div class="rail-foot">A small corner of the internet for ideas and code.</div></div></aside>
       <div class="main-content">
         <section class="content-section" id="about" aria-labelledby="about-title">
           <div class="section-top"><div><span class="section-number">01 / ABOUT</span><h2 id="about-title">A little about me</h2></div><span class="aside-note">Curiosity, made practical.</span></div>
           <p class="intro">I'm interested in the space where research ideas become working systems — from representation learning and language models to the careful engineering that makes them useful.</p>
-          <p class="body-copy">My public repositories include experiments in protein–drug interaction prediction, Chinese text classification, and machine learning competitions. I use this space to collect the work I can share publicly.</p>
+          <p class="body-copy">I publish under the name Yishen Hu. My public repositories include experiments in protein–drug interaction prediction, Chinese text classification, and machine learning competitions. I use this space to collect the work I can share publicly.</p>
+        </section>
+        <section class="content-section" id="publications" aria-labelledby="publications-title">
+          <div class="section-top"><div><span class="section-number">02 / PUBLICATIONS</span><h2 id="publications-title">Selected publications</h2></div><span class="aside-note">Published as Yishen Hu</span></div>
+          <div class="paper-list">
+            <article class="paper-card">
+              <div class="project-meta"><span>2026</span><span>arXiv preprint</span><span>User modeling</span></div>
+              <h3>KuaFu: Compressing Long User Behavior into Understanding at Billion Scale</h3>
+              <p class="authors">Jiahao Hui, Lin Zhu, <strong>Yishen Hu</strong>, Jingdong Shu, Zetai Jiang, Xining Ran, Ben Tan, Yeshou Cai, Gong Chen, Haijie Gu, Jie Jiang</p>
+              <p class="summary">A behavior-item compression layer designed for large-scale user understanding, with fidelity-oriented training and intermediate evaluation.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2609.31045" target="_blank" rel="noopener noreferrer">arXiv ↗</a><a href="https://arxiv.org/pdf/2609.31045" target="_blank" rel="noopener noreferrer">PDF ↗</a></div>
+            </article>
+            <article class="paper-card">
+              <div class="project-meta"><span>2023</span><span>Advanced Science</span><span>Protein representation</span></div>
+              <h3>A Multimodal Protein Representation Framework for Quantifying Transferability Across Biochemical Downstream Tasks</h3>
+              <p class="authors">Fan Hu, <strong>Yishen Hu</strong>, Weihong Zhang, Huazhen Huang, Yi Pan, Peng Yin</p>
+              <p class="summary">MASSA learns from protein sequence, structure, and functional annotations; the study also examines transferability across biochemical tasks.</p>
+              <div class="paper-links"><a href="https://doi.org/10.1002/advs.202301223" target="_blank" rel="noopener noreferrer">Journal / DOI ↗</a><a href="https://advanced.onlinelibrary.wiley.com/doi/epdf/10.1002/advs.202301223" target="_blank" rel="noopener noreferrer">Publisher PDF ↗</a></div>
+            </article>
+          </div>
         </section>
         <section class="content-section" id="work" aria-labelledby="work-title">
-          <div class="section-top"><div><span class="section-number">02 / SELECTED WORK</span><h2 id="work-title">Projects &amp; code</h2></div><a class="text-link" href="https://github.com/Easonhuu?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories ↗</a></div>
+          <div class="section-top"><div><span class="section-number">03 / SELECTED WORK</span><h2 id="work-title">Projects &amp; code</h2></div><a class="text-link" href="https://github.com/Easonhuu?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories ↗</a></div>
           <div class="project-list">
             <a class="project-card" href="https://github.com/Easonhuu/PDI" target="_blank" rel="noopener noreferrer"><div><div class="project-meta"><span>01</span><span>Representation learning</span><span>Python</span></div><h3>Protein–drug interaction prediction</h3><p>Code and data workflow for a protein–drug interaction prediction project using Transformers and graph-based representations.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
             <a class="project-card" href="https://github.com/Easonhuu/Text-Classification-Bert-Pytorch" target="_blank" rel="noopener noreferrer"><div><div class="project-meta"><span>02</span><span>Natural language processing</span><span>Python</span></div><h3>Text classification with BERT</h3><p>An adapted PyTorch template for Chinese text classification, built from an existing open-source implementation.</p></div><span class="arrow" aria-hidden="true">↗</span></a>
@@ -129,7 +157,7 @@
           </div>
         </section>
         <section class="content-section" id="interests" aria-labelledby="interests-title">
-          <div class="section-top"><div><span class="section-number">03 / INTERESTS</span><h2 id="interests-title">Questions worth exploring</h2></div></div>
+          <div class="section-top"><div><span class="section-number">04 / INTERESTS</span><h2 id="interests-title">Questions worth exploring</h2></div></div>
           <div class="interests">
             <div class="interest"><div class="interest-icon" aria-hidden="true">I.</div><h3>Representation learning</h3><p>Learning compact, useful representations from complex data.</p></div>
             <div class="interest"><div class="interest-icon" aria-hidden="true">II.</div><h3>Language &amp; AI</h3><p>Understanding text and building systems around modern language models.</p></div>
@@ -137,7 +165,7 @@
           </div>
         </section>
         <section class="content-section" id="contact" aria-labelledby="contact-title">
-          <div class="section-top"><div><span class="section-number">04 / CONNECT</span><h2 id="contact-title">Let's connect</h2></div></div>
+          <div class="section-top"><div><span class="section-number">05 / CONNECT</span><h2 id="contact-title">Let's connect</h2></div></div>
           <div class="contact-panel"><div><strong>Find the work, start a conversation.</strong><p>Browse my public repositories or reach me through GitHub.</p></div><a class="button-primary" href="https://github.com/Easonhuu" target="_blank" rel="noopener noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a></div>
         </section>
       </div>
